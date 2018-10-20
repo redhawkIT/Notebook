@@ -13,5 +13,6 @@ module.exports = {
   },
   cookie: {
     secret: 'plz-invite-keller-onsite'
-  }
+  },
+  db: 'mongodb://USER:PASS@FOO.mlab.com:55709/BAR'
 }

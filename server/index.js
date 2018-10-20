@@ -3,7 +3,7 @@ require('./exceptions/process')
 const next = require('next')
 const express = require('express')
 const config = require('../config')
-const { Express, HTTP } = require('./setup')
+const { DB, Express, HTTP } = require('./setup')
 const { API, React } = require('./routes')
 
 const ReactEngine = next({ dev: config.dev })
@@ -13,6 +13,9 @@ ReactEngine
     // Initialize express instance and configure parsers / sessionware
     const server = express()
     Express(server, config)
+
+    // Database setup
+    DB(server, config)
 
     // Initialize routes - API, client pages, etc
     API(server, config)
