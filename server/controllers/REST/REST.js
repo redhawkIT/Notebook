@@ -1,15 +1,15 @@
-import restify from 'express-restify-mongoose'
+const restify = require('express-restify-mongoose')
 
-export default class Restify {
+module.exports = class Restify {
   constructor (router, model) {
     this.model = model
     this.config = {
-      prefix: '/api',
-      version: '/v1',
+      prefix: '',
+      version: '',
       name: this.model.modelName.toLowerCase(),
       access: (req) => 'private'
     }
     restify.serve(router, this.model, this.config)
-    console.log(`REST: Instantiated controller: ${this.config.name}`)
+    console.log(`REST: Instantiated controller: .../${this.config.name}`)
   }
 }
