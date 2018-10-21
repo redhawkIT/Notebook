@@ -10,3 +10,4 @@ config/*.ppk
 # Build folders
 build/
 coverage/
+config/index.js
