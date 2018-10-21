@@ -1,6 +1,6 @@
 module.exports = {
   User: require('./User'),
-  UserReview: require('./UserReview'),
+  Review: require('./Review'),
   TastingNote: require('./TastingNote'),
   Product: require('./Product'),
   Producer: require('./Producer'),

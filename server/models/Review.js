@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const { ObjectId } = mongoose.Schema.Types
 
 /*
-USERREVIEW SCHEMA:
+REVIEW SCHEMA:
 */
 const Schema = new mongoose.Schema({
   authorId: { type: ObjectId, default: 'User' },
@@ -13,6 +13,6 @@ const Schema = new mongoose.Schema({
   rating: { type: Number, default: 0 }
 })
 
-const Model = mongoose.model('UserReview', Schema)
+const Model = mongoose.model('Review', Schema)
 
 module.exports = Model

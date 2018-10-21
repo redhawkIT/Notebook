@@ -6,5 +6,5 @@ E.g. [RedHat-CVEs, RedHat-CVRFs, ...]
 */
 module.exports = [
   ...require('./RedHat'),
-  ...require('./REST')
+  ...require('./Chocolate')
 ]
