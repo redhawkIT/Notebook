@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 // import autoref from 'mongoose-autorefs'
-const { ObjectID } = mongoose.Scheme.Types;
+const { ObjectId } = mongoose.Schema.Types
 
 /*
 USER SCHEMA:
 */
 const Schema = new mongoose.Schema({
   name: { type: String, default: '' },
-  preferredTastingNotes : [{type: ObjectID, ref: 'TastingNote'}],
-  preferredChocolateType: [{type: ObjectID, ref: 'ChocolateTypes'}]
+  preferredTastingNotes: [{ type: ObjectId, ref: 'TastingNote' }],
+  preferredChocolateType: [{ type: ObjectId, ref: 'ChocolateType' }]
 })
 
 const Model = mongoose.model('User', Schema)

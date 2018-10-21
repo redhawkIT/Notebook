@@ -1,13 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 // import autoref from 'mongoose-autorefs'
-const { ObjectID } = mongoose.Scheme.Types;
+// const { ObjectId } = mongoose.Schema.Types
 
 /*
 TASTINGNOTE SCHEMA:
 */
 const Schema = new mongoose.Schema({
-    group:  { type: String, default: 'Other' },
-    tastingNoteName: { type: String, default: '' }
+  group: { type: String, default: 'Other' },
+  tastingNoteName: { type: String, default: '' }
 })
 
 const Model = mongoose.model('TastingNote', Schema)

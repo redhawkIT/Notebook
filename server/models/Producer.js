@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 // import autoref from 'mongoose-autorefs'
-const { ObjectID } = mongoose.Scheme.Types;
+// const { ObjectId } = mongoose.Schema.Types
 
 /*
 Producer SCHEMA:
 */
 const Schema = new mongoose.Schema({
-  producerName:  { type: Boolean, default: false },
+  producerName: { type: Boolean, default: false },
   producerDescription: { type: String, default: '' },
-  producerIsClaimed : { type: Boolean, default: false },
-  producerUsername: { type: String, ref: '' }
+  producerIsClaimed: { type: Boolean, default: false },
+  producerUsername: { type: String, ref: 'User' }
 })
 
 const Model = mongoose.model('Producer', Schema)
