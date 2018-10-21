@@ -10,7 +10,7 @@ module.exports = class Restify {
       allowRegex: true,
       runValidators: false,
       private: [],
-      protected: [],
+      protected: ['__v'],
       access: this.access,
       findOneAndUpdate: true,
       findOneAndRemove: true,
