@@ -6,9 +6,10 @@ const { ObjectID } = mongoose.Scheme.Types;
 USER SCHEMA:
 */
 const Schema = new mongoose.Schema({
-  chocolateType: { type: String, default: '' } // White, Milk, Dark, Dark Milk, Extra Dark
-})
-
-const Model = mongoose.model('User', Schema)
-
-module.exports = Model
+  chocolateType: { type: String, enum: ['White', 'Milk', 'Dark', 'Dark Milk'] }
+});
+  
+  const Model = mongoose.model('User', Schema)
+  
+  module.exports = Model
+  

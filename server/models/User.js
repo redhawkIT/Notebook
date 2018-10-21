@@ -7,7 +7,7 @@ USER SCHEMA:
 */
 const Schema = new mongoose.Schema({
   name: { type: String, default: '' },
-  preferredTastingNotes : [{type: ObjectID, ref: 'TastingNotes'}],
+  preferredTastingNotes : [{type: ObjectID, ref: 'TastingNote'}],
   preferredChocolateType: [{type: ObjectID, ref: 'ChocolateTypes'}]
 })
 

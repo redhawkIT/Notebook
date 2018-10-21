@@ -8,7 +8,7 @@ USERREVIEW SCHEMA:
 const Schema = new mongoose.Schema({
     authorId:  { type: ObjectID, default: 'User' },
     reviewText: { type: String, default: '' },
-    tastingNotes: [{ type: ObjectID, ref: 'TastingNotes' }],
+    tastingNotes: [{ type: ObjectID, ref: 'TastingNote' }],
     productText: { type: String, default: '' },
     rating: { type: Number, default: 0 }
 })
