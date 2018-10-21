@@ -9,8 +9,8 @@ export default class INDEX_PAGE extends React.Component {
       <article>
         <Helmet title='Home' />
         <section>
-          <h1>RedHat Vulnerability Dashboard</h1>
-          <p>Sample Application using NextJS, Node/Express and React-MD</p>
+          <h1>Chocolate Reviews</h1>
+          <p>Project for Dubhacks MLH Hackathon 2018</p>
         </section>
       </article>
     )

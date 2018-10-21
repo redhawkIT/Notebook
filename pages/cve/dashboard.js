@@ -9,7 +9,7 @@ import { CVE } from 'enums'
 import ReactTable from 'react-table'
 
 export default class CVES_PAGE extends React.Component {
-  static async getInitialProps ({ req, query }) {
+  static async getInitialProps ({ req, res, query }) {
     let props = {}
     try {
       const cves = await axios
