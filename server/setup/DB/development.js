@@ -7,7 +7,7 @@ const DB = (server, config) => {
   const { db } = config
   const connect = () => {
     mongoose.Promise = Promise
-    mongoose.connect(db, (err) => {
+    mongoose.connect(db, { useMongoClient: true }, (err) => {
       if (err) {
         console.warn(`===>  Error connecting to ${db}\n${err}`)
       } else {
